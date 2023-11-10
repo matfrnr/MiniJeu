@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../button.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pays</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="filter-container">
+      <!--Recherche de pays-->
+      <input type="text" id="inputSearch" placeholder="Rechercher" />
+      <div class="range-container">
+        <!--Nombres de pays-->
+        <input type="range" value="24" max="250" min="4" id="inputRange" />
+        <span id="rangeValue">24</span>
+      </div>
+      <!--Onglet de tri-->
+      <button class="btnSort" id="minToMax">Tri croissant</button>
+      <button class="btnSort" id="maxToMin">Tri décroissant</button>
+      <button class="btnSort" id="alpha">Tri Alphabétique</button>
+    </div>
+
+    <!--Bloc qui contient les pays-->
+    <div class="countries-container"></div>
+
+    <!--Icone maison-->
+    <a href="../index.html">
+      <i class="fas fa-home"></i>
+    </a>
+
+    <script src="index.js"></script>
+  </body>
+</html>

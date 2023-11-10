@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../button.css">
+    <title>Génerateur mot de passe</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!--Niveau de securité du mdp géré par du JS-->
+    <div class="security">
+      <h2>Niveau de securité</h2>
+      <!--Par défaut-->
+      <p>-</p>
+    </div>
+
+    <!--Afficher le mdp généré-->
+    <div class="app">
+      <input
+        type="text"
+        id="password-output"
+        value="Générateur de mdp"
+        readonly>
+
+      <!--Gérer la longueur du mot de passe-->
+      <div class="range-container">
+        <input
+          type="range"
+          id="password-length"
+          min="4"
+          max="30"
+          value="8"
+          oninput="document.getElementById('display-password-length').value = this.value"
+        >
+        <!--Longueur par défaut-->
+        <input type="text" id="display-password-length" value="8" readonly>
+      </div>
+
+      <!--Gérer les critères sélectionné-->
+      <div class="checkbox-container">
+        <input type="checkbox" id="lowercase" checked>
+        <label for="lowercase">a-z</label>
+
+        <input type="checkbox" id="uppercase">
+        <label for="uppercase">A-Z</label>
+
+        <input type="checkbox" id="numbers">
+        <label for="numbers">0-9</label>
+
+        <input type="checkbox" id="symbols">
+        <label for="symbols">!-?</label>
+      </div>
+
+      <!--Button pour générer le mdp-->
+      <button id="generateButton">Générer le mot de passe</button>
+    </div>
+
+     <!--Icone maison-->
+     <a href="../index.html">
+      <i class="fas fa-home"></i>
+    </a>
+
+    <script src="index.js"></script>
+  </body>
+</html>

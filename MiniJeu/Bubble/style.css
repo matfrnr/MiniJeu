@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+/*score*/
+h3 {
+  font-size: clamp(5rem, 2vw, 10rem);
+  text-align: center;
+  margin-top: 20px;
+  color: grey;
+  opacity: 0.6;
+  user-select: none;
+}
+
+/* Bulle par défaut */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 166, 0, 0.6);
+  opacity: 0;
+  animation: anim 8s forwards;
+  filter: hue-rotate(0deg);
+}
+
+/*animation d'une bulle */
+@keyframes anim {
+  to {
+    top: -350px;
+    left: var(--left);
+    opacity: 1;
+    filter: hue-rotate(720deg);
+  }
+}
+
+/* chronomètre*/
+#timerDisplay {
+  font-size: 1rem;
+  user-select: none;
+  cursor: pointer;
+}
+
+/*dernier score*/
+#scoreDisplay {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  user-select: none;
+}
+

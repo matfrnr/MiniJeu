@@ -1,0 +1,64 @@
+/*onglet de tri*/
+.filter-container {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/*champ de recherche*/
+input {
+  margin: 20px auto;
+  display: block;
+  font-size: 1.4rem;
+  text-align: center;
+  transition: 0.2s;
+}
+
+/*écrit à l'intérieur*/
+input:focus {
+  border-radius: 30px;
+  background: rgb(238, 238, 238);
+}
+
+/*nombre de pays*/
+.range-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="range"] {
+  width: 250px;
+  margin: 0 10px 10px 0;
+}
+
+/*chiffre à coté de la barre */
+.range-container span {
+  font-size: 1.2rem;
+  transform: translateY(-3px);
+}
+
+/*bloc qui contient les pays*/
+.countries-container {
+  display: flex;
+  flex-wrap: wrap; /*responsive*/
+  text-align: center;
+}
+
+/*bloc qui contient 1 pays*/
+.card {
+  flex: 1 0 20%;
+  min-width: 260px;
+  background: rgb(17, 17, 17);
+  margin: 5px;
+  color: rgb(245, 245, 245);
+  border-radius: 20px;
+  padding: 20px;
+  font-family: "Lucida Sans", sans-serif;
+}
+
+/*taille des drapeaux*/
+img {
+  height: 100px;
+  width: 160px;
+  object-fit: cover;
+}

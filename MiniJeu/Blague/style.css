@@ -1,0 +1,86 @@
+/*elements généraux*/
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: Cambria, serif;
+  font-size: 1.6rem;
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  color: rgb(241, 241, 241);
+  user-select: none;
+  overflow: hidden;
+}
+
+/* bloc de la blague */
+.app {
+  width: 70%;
+  max-width: 900px;
+  background: rgb(145, 115, 246);
+  border-radius: 14px;
+  padding: 20px 40px;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.307);
+  transition: 0.2s;
+  z-index: 3; /* passer au dessus des étoiles */
+}
+
+/*survol bloc*/
+.app:hover {
+  transform: scale(1.01);
+}
+
+/*titre blague$*/
+h3 {
+  font-size: clamp(1.3rem, 2vw, 2.5rem);
+}
+
+/*contenu blague */
+p {
+  font-size: clamp(1.1rem, 1.5vw, 1.8rem);
+}
+
+/*mettre la maison en blanc*/
+i {
+  color: white;
+}
+
+/* bouton pour copier */
+button {
+  margin: 15px;
+  padding: 15px 30px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #725ac1;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #725ac1;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #725ac1;
+  z-index: 2;
+  outline: none;
+}
+
+button:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #725ac1;
+}
+
+/* responsive */
+@media screen and (max-width: 600px) {
+  .app {
+    width: 88%;
+    padding: 10px 20px;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  button {
+    display: none; /* gagner de la place */
+  }
+}

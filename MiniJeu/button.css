@@ -1,0 +1,18 @@
+/*--------------------BOUTON RETOUR / ICONE MAISON--------------------*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+i{
+    color: black;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 1.3rem;
+    z-index: 4;
+}
+
+@media screen and (max-width: 600px) {
+    i{
+        top: 10px;
+        right: 10px;
+    }
+}
